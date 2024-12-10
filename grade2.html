@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+        .dark-mode {
+            background-color: #121212; /* خلفية سوداء للوضع الداكن */
+            color: #f4f4f4; /* نصوص فاتحة */
+        }
+
+        header.hero {
+            position: relative;
+            background-image: url('https://st2.depositphotos.com/2824873/12309/v/950/depositphotos_123092006-stock-illustration-physics-background-02-a.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            transition: background 0.3s ease-in-out;
+        }
+        nav {
+            background-color: #333;
+            color: #acacac;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        dark-mode nav {
+            background-color: #222; /* خلفية داكنة للشريط */
+        }
+        .mode-toggle {
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .content-box {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: #ffffff; /* افتراضي */
+            color: #121212; /* نص داكن */
+            border-radius: 10px; /* تحسين الحواف */
+            padding: 20px; /* إضافة مسافة داخلية */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* تحسين الظل */
+        }
+        .dark-mode .content-box {
+            background-color: #00bcd4; /* خلفية لبني للوضع الداكن */
+            color: #121212; /* نص داكن يتباين مع اللبني */
+            border-radius: 10px; /* تحسين الحواف */
+            padding: 20px; /* إضافة مسافة داخلية */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* تحسين الظل */
+        }
+        .section-box {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: #f4f4f4; /* افتراضي */
+            color: #121212; /* نص داكن */
+        }
+        .dark-mode .section-box {
+            background-color: #000; /* خلفية سوداء للوضع الداكن */
+            color: #f4f4f4; /* نص فاتح للوضع الداكن */
+        }
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+        header.hero {
+            position: relative;
+            background-image: url('https://st2.depositphotos.com/2824873/12309/v/950/depositphotos_123092006-stock-illustration-physics-background-02-a.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            transition: background 0.3s ease-in-out;
+        }
+        .dark-mode {
+            background-color: #121212;
+            color: #f4f4f4;
+        }
+         /* تغيير خلفية مستطيل المراحل الدراسية في الوضع الداكن */
+        .dark-mode .courses {
+            background-color: #000; /* خلفية سوداء */
+            color: #f4f4f4; /* لون النص */
+            border-radius: 10px; /* تحسين الحواف */
+            padding: 20px; /* إضافة مسافة داخلية */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* تحسين الظل */
+        }
+        /* تغيير خلفية مستطيل "عن الفيزياء" في الوضع الداكن */
+        .dark-mode .about {
+            background-color: #000; /* خلفية سوداء */
+            color: #f4f4f4; /* لون النص */
+            border-radius: 10px; /* تحسين الحواف */
+            padding: 20px; /* مسافة داخلية */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* تحسين الظل */
+        }
+
+
+        nav.navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+        }
+        nav.navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+        nav.navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        .dark-mode nav.navbar {
+            background-color: #222;
+        }
+        .mode-toggle {
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .courses .stage-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .stage-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 30%;
+            text-align: center;
+            cursor: pointer;
+        }
+        .stage-card:hover {
+            background-color: #e0e0e0;
+        }
+        .dark-mode .stage-card {
+            background-color: rgba(50, 50, 50, 0.9);
+        }
+        .stage-card h3 {
+            color: #333;
+        }
+        .dark-mode .stage-card h3 {
+            color: #f4f4f4;
+        }
+
+        .no-background {
+            background-image: none !important;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        nav.navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav.navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            
+        }
+        nav.navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .courses .stage-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .stage-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 30%;
+            text-align: center;
+        }
+        .stage-card h3 {
+            color: #333;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصف الثاني الثانوي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>الصف الثاني الثانوي</h1>
+    </header>
+</nav>
+
+<div class="content-box">
+    <h2>محتويات الصف الثاني الثانوي</h2>
+    <p>هنا ستجد محتوى خاص بالصف الثاني الثانوي.</p>
+</div>
+<footer>
+    <p>𝝅 Pola Tarek Ragaey&copy; 2024 جميع الحقوق محفوظة</p>
+</footer>
+<script>
+    // فحص وتفعيل الوضع المحفوظ عند تحميل الصفحة
+    document.addEventListener('DOMContentLoaded', () => {
+        // إذا تم تخزين الوضع الداكن على أنه مفعل، أضف الفئة "dark-mode" إلى body
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            const toggleButton = document.getElementById('mode-toggle');
+            if (toggleButton) {
+                toggleButton.textContent = '☀️'; // تغيير النص ليعكس الوضع الحالي
+            }
+        }
+    });
+    
+    // تبديل الوضع وتحديث حالة التخزين
+    const toggleButton = document.getElementById('mode-toggle');
+    if (toggleButton) {
+        toggleButton.addEventListener('click', () => {
+            // إذا كان الوضع الداكن مفعلاً، قم بإيقافه
+            if (document.body.classList.contains('dark-mode')) {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+                toggleButton.textContent = '🌙';
+            } else {
+                // إذا لم يكن الوضع الداكن مفعلاً، قم بتفعيله
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+                toggleButton.textContent = '☀️';
+            }
+        });
+    }
+</script>
+</body>
+</html>
