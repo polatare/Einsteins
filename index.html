@@ -19,7 +19,86 @@
             font-family: 'Cairo', sans-serif;
             transition: background-color 0.5s ease, color 0.5s ease;
         }
+        #card-1-container {
+        position: relative; /* للسماح بوضع الزر فوق الخلفية */
+        background-image: url('https://c0.wallpaperflare.com/preview/469/70/385/background-book-bookcase-books.jpg');
+        background-size: cover; /* لجعل الصورة تغطي القسم بالكامل */
+        background-position: center; /* لمركز الصورة */
+        border-radius: 8px; /* تحسين الحواف */
+        padding: 20px;
+        overflow: hidden; /* منع المحتوى من الخروج خارج الإطار */
+    }
 
+    /* الزر */
+    #card-1 {
+        position: relative; /* لضمان ظهوره فوق الخلفية */
+        z-index: 10; /* جعله فوق الصورة */
+        background-color: rgba(255, 255, 255, 0.8); /* خلفية نصف شفافة للزر */
+        padding: 15px 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    #card-1:hover {
+        transform: scale(1.05); /* تكبير الزر عند التمرير */
+        background-color: rgba(255, 255, 255, 1); /* زيادة وضوح الخلفية */
+    }
+    #card-3-container {
+        position: relative; /* للسماح بوضع الزر فوق الخلفية */
+        background-image: url('https://c4.wallpaperflare.com/wallpaper/811/35/824/lightbulb-artwork-robot-render-wallpaper-preview.jpg');
+        background-size: cover; /* لجعل الصورة تغطي القسم بالكامل */
+        background-position: center; /* لمركز الصورة */
+        border-radius: 8px; /* تحسين الحواف */
+        padding: 20px;
+        overflow: hidden; /* منع المحتوى من الخروج خارج الإطار */
+    }
+
+    /* الزر */
+    #card-3 {
+        position: relative; /* لضمان ظهوره فوق الخلفية */
+        z-index: 10; /* جعله فوق الصورة */
+        background-color: rgba(255, 255, 255, 0.8); /* خلفية نصف شفافة للزر */
+        padding: 15px 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    #card-3:hover {
+        transform: scale(1.05); /* تكبير الزر عند التمرير */
+        background-color: rgba(255, 255, 255, 1); /* زيادة وضوح الخلفية */
+    }
+    /* القسم الذي يحتوي على الصورة كخلفية */
+    #card-2-container {
+        position: relative; /* للسماح بوضع الزر فوق الخلفية */
+        background-image: url('https://c4.wallpaperflare.com/wallpaper/1003/64/947/brown-canyon-with-greed-grass-and-trees-and-blue-cloudy-sky-zion-national-park-utah-zion-national-park-utah-wallpaper-preview.jpg');
+        background-size: cover; /* لجعل الصورة تغطي القسم بالكامل */
+        background-position: center; /* لمركز الصورة */
+        border-radius: 8px; /* تحسين الحواف */
+        padding: 20px;
+        overflow: hidden; /* منع المحتوى من الخروج خارج الإطار */
+    }
+
+    /* الزر */
+    #card-2 {
+        position: relative; /* لضمان ظهوره فوق الخلفية */
+        z-index: 10; /* جعله فوق الصورة */
+        background-color: rgba(255, 255, 255, 0.8); /* خلفية نصف شفافة للزر */
+        padding: 15px 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    #card-2:hover {
+        transform: scale(1.05); /* تكبير الزر عند التمرير */
+        background-color: rgba(255, 255, 255, 1); /* زيادة وضوح الخلفية */
+    }
+    
         header.hero {
             transition: background 0.5s ease-in-out;
         }
@@ -45,6 +124,20 @@
             background-color: #121212;
             color: #f4f4f4;
         }
+        .dark-mode #card-1,
+        .dark-mode #card-2,
+        .dark-mode #card-3 {
+            background-color: #00a6ff8f; /* اللون الأزرق */
+            color: #fff; /* لون النص الأبيض */
+            transition: background-color 0.3s ease, color 0.3s ease; /* تأثير الحركة */
+        }
+
+.dark-mode #card-1:hover,
+.dark-mode #card-2:hover,
+.dark-mode #card-3:hover {
+    background-color: #0056b3; /* لون أغمق عند التمرير */
+}
+
          /* تغيير خلفية مستطيل المراحل الدراسية في الوضع الداكن */
         .dark-mode .courses {
             background-color: #000; /* خلفية سوداء */
@@ -196,17 +289,23 @@
         <section id="courses" class="courses">
             <h2>المراحل الدراسية</h2>
             <div class="stage-list">
-                <div class="stage-card" id="card-1" onclick="location.href='grade1.html'">
-                    <h3>الصف الأول الثانوي</h3>
-                    <p>علوم متكامله.</p>
+                <div id="card-1-container">
+                    <div id="card-1" onclick="location.href='grade1.html'">
+                        <h3>الصف الأول الثانوي</h3>
+                        <p>علوم متكامله.</p>
+                    </div>
                 </div>
-                <div class="stage-card" id="card-2" onclick="location.href='grade2.html'">
-                    <h3>الصف الثاني الثانوي</h3>
-                    <p>الفصل الاول و الثاني و الثالث.</p>
+                <div id="card-2-container">
+                    <div id="card-2" onclick="location.href='grade1.html'">
+                        <h3>الصف الثاني الثانوي</h3>
+                        <p>الفصل الاول و الثاني و الثالث</p>
+                    </div>
                 </div>
-                <div class="stage-card" id="card-3" onclick="location.href='grade3.html'">
-                    <h3>الصف الثالث الثانوي</h3>
-                    <p>فيزياء كهربيه و حديثه.</p>
+                <div id="card-3-container">
+                    <div id="card-3" onclick="location.href='grade1.html'">
+                        <h3>الصف الثالث الثانوي</h3>
+                        <p>كهربيه وحديثه.</p>
+                    </div>
                 </div>
             </div>
         </section>
