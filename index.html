@@ -28,7 +28,32 @@
         padding: 20px;
         overflow: hidden; /* منع المحتوى من الخروج خارج الإطار */
     }
-
+    footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            display: inline-block;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        footer a:hover {
+            transform: scale(1.1);
+            color: #ffcc00;
+        }
+        footer a img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            transition: transform 0.3s ease;
+        }
+        footer a img:hover {
+            transform: scale(1.2);
+        }
     /* الزر */
     #card-1 {
         position: relative; /* لضمان ظهوره فوق الخلفية */
@@ -135,7 +160,7 @@
 .dark-mode #card-1:hover,
 .dark-mode #card-2:hover,
 .dark-mode #card-3:hover {
-    background-color: #000000 ; /* لون أغمق عند التمرير */
+    background-color: #000000; /* لون أغمق عند التمرير */
 }
 
          /* تغيير خلفية مستطيل المراحل الدراسية في الوضع الداكن */
@@ -154,7 +179,7 @@
             padding: 20px; /* مسافة داخلية */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* تحسين الظل */
         }
-
+        
         .navbar {
     background-color: #333;
     color: #fff;
@@ -271,8 +296,8 @@
     
     <nav class="navbar">
         <ul class="navbar-menu">
-            <li><a href="#about">physics</a></li>
-            <li><a href="#courses">Courses</a></li>
+            <li><a href="#about">About physics</a></li>
+            <li><a href="#courses">courses</a></li>
         </ul>
         <div class="navbar-right">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/120px-Albert_Einstein_Head.jpg" alt="Einstein" class="einstein-img">
@@ -365,7 +390,17 @@
     
     </style>    
     <footer>
-        <p>𝝅 Pola Tarek Ragaey&copy; 2024 جميع الحقوق محفوظة</p>
+        <p>
+            <a href="https://www.youtube.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2504/2504848.png" alt="YouTube">
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="https://cdn.pixabay.com/photo/2022/04/08/07/18/facebook-7118901_1280.png" alt="Facebook">
+            </a>
+        </p>
+        <p>
+            <a href="https://www.facebook.com/pola.tarek.923?locale=ar_AR" target="_blank">𝝅 Pola Tarek Ragaey&copy;2024</a>
+        </p>
     </footer> 
 
     <script>
