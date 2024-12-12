@@ -215,6 +215,39 @@
         .stage-card h3 {
             color: #333;
         }
+/*بدايه.*/.lesson { 
+    margin-bottom: 30px; /* مسافة بين الدروس */
+}
+
+.lesson-button {
+    cursor: pointer;
+    background-color: #00bcd4;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+}
+
+.lesson-button:hover {
+    background-color: #019aa6;
+    transform: scale(1.05);
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 20px auto;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
     </style>
 <head>
     <meta charset="UTF-8">
@@ -232,6 +265,15 @@
     <h2>محتويات الصف الثاني الثانوي</h2>
     <p>هنا ستجد محتوى خاص بالصف الثاني الثانوي.</p>
 </div>
+<div class="lesson">
+    <div class="content-box lesson-button" id="lesson-1-button">
+        <h2>الدرس الأول <span class="arrow" style="float: left;">▼</span></h2>
+    </div>
+    <div class="video-container" id="lesson-1-videos" style="opacity: 0; transform: translateY(-20px); display: none;">
+        <iframe width="600" height="400" src="https://www.youtube.com/embed/k1nvaO-WC4k?si=Xe8b4MeipGvilyeR" title="YouTube video player 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+</div>
+
 <footer>
     <p>𝝅 Pola Tarek Ragaey&copy; 2024 جميع الحقوق محفوظة</p>
 </footer>
@@ -265,6 +307,37 @@
             }
         });
     }
+    // الحصول على كل الأزرار
+    const lessonButtons = document.querySelectorAll('.lesson-button');
+
+    lessonButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const lessonId = button.id.replace('-button', '-videos'); // تحديد الفيديوهات المقابلة للزر
+            const videoContainer = document.getElementById(lessonId);
+            const arrow = button.querySelector('.arrow');
+
+            // تبديل العرض والإخفاء
+            if (videoContainer.style.display === 'none' || videoContainer.style.display === '') {
+                videoContainer.style.display = 'flex';
+                setTimeout(() => {
+                    videoContainer.style.opacity = '1';
+                    videoContainer.style.transform = 'translateY(0)';
+                }, 10);
+                arrow.style.transform = 'rotate(180deg)';
+            } else {
+                videoContainer.style.opacity = '0';
+                videoContainer.style.transform = 'translateY(-20px)';
+                setTimeout(() => {
+                    videoContainer.style.display = 'none';
+                }, 500);
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        });
+    });
+
+
 </script>
+<script src="script.js"></script>
+
 </body>
 </html>
