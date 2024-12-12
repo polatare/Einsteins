@@ -28,7 +28,6 @@
              transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
         }
 
-
         header.hero {
             position: relative;
             background-image: url('https://st2.depositphotos.com/2824873/12309/v/950/depositphotos_123092006-stock-illustration-physics-background-02-a.jpg');
@@ -63,36 +62,70 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* تحسين الظل */
         }
 
+        .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        nav.navbar {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-        }
-        nav.navbar ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 15px;
-        }
-        nav.navbar a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-        }
-        .dark-mode nav.navbar {
-            background-color: #222;
-        }
-        .mode-toggle {
-            cursor: pointer;
-            font-size: 20px;
-        }
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.einstein-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.einstein-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+.mode-toggle {
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #555;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.mode-toggle:active {
+    transform: translateX(5px); /* تأثير الحركة عند النقر */
+}
+
+.dark-mode .mode-toggle {
+    background-color: #222;
+    color: #f4f4f4;
+}
         .courses .stage-list {
             display: flex;
             justify-content: space-around;
@@ -144,12 +177,16 @@
     </header>
     
     <nav class="navbar">
-        <ul>
+        <ul class="navbar-menu">
             <li><a href="#about">عن الفيزياء</a></li>
             <li><a href="#courses">الدروس</a></li>
             <li><a href="#contact">اتصل بنا</a></li>
         </ul>
-        <div class="mode-toggle" id="mode-toggle">🌙</div>
+        <div class="navbar-right">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/120px-Albert_Einstein_Head.jpg" alt="Einstein" class="einstein-img">
+            <span class="einstein-name">Einstein</span>
+            <div class="mode-toggle" id="mode-toggle">🌙</div>
+        </div>
     </nav>
     <main>
         <section id="about" class="about">
@@ -316,3 +353,5 @@
 </script>
 </body>
 </html>
+
+
