@@ -5,57 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>منصة أينشتاين - تعليم الفيزياء</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="D:\html/einstein.png">
-
+</head>
     <style>
-        body {
-            margin: 0;
-            font-family: 'Cairo', sans-serif;
-        }
-        body {
+        body 
+        {
             margin: 0;
             font-family: 'Cairo', sans-serif;
             transition: background-color 0.5s ease, color 0.5s ease;
         }
-        #card-1-container {
-        position: relative; /* للسماح بوضع الزر فوق الخلفية */
-        background-image: url('https://c0.wallpaperflare.com/preview/469/70/385/background-book-bookcase-books.jpg');
-        background-size: cover; /* لجعل الصورة تغطي القسم بالكامل */
-        background-position: center; /* لمركز الصورة */
-        border-radius: 8px; /* تحسين الحواف */
-        padding: 20px;
-        overflow: hidden; /* منع المحتوى من الخروج خارج الإطار */
-    }
-    footer {
+        #card-1-container
+        {
+            position: relative; /* خلفية الصف الاول */
+            background-image: url('https://c0.wallpaperflare.com/preview/469/70/385/background-book-bookcase-books.jpg');
+            background-size: cover; /* لجعل الصورة تغطي القسم بالكامل */
+            background-position: center; /* لمركز الصورة */
+            border-radius: 8px; /* تحسين الحواف */
+            padding: 20px;
+            overflow: hidden; /* منع المحتوى من الخروج خارج الإطار */
+        }
+        footer a img 
+        {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px; /* لتحسين الشكل */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* ظل ثلاثي الأبعاد */
+        }
+
+        footer a img:hover 
+        {
+            transform: translateY(-10px) scale(1.1); /* حركة عند التمرير */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* ظل أعمق */
+        }
+        footer
+        {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 20px;
         }
-        footer a {
+        footer a 
+        {
             color: #fff;
             text-decoration: none;
             margin: 0 10px;
             display: inline-block;
             transition: transform 0.3s ease, color 0.3s ease;
         }
-        footer a:hover {
+        footer a:hover 
+        {
             transform: scale(1.1);
-            color: #ffcc00;
+            color: #00bfff;
         }
-        footer a img {
+        footer a img 
+        {
             width: 24px;
             height: 24px;
             vertical-align: middle;
             transition: transform 0.3s ease;
         }
-        footer a img:hover {
+        footer a img:hover 
+        {
             transform: scale(1.2);
         }
-    /* الزر */
-    #card-1 {
+    /* زراير السوشيال*/
+    #card-1 
+    {
         position: relative; /* لضمان ظهوره فوق الخلفية */
         z-index: 10; /* جعله فوق الصورة */
         background-color: rgba(255, 255, 255, 0.8); /* خلفية نصف شفافة للزر */
@@ -66,11 +82,13 @@
         transition: transform 0.3s ease, background-color 0.3s ease;
     }
 
-    #card-1:hover {
+    #card-1:hover 
+    {
         transform: scale(1.05); /* تكبير الزر عند التمرير */
         background-color: rgba(255, 255, 255, 1); /* زيادة وضوح الخلفية */
     }
-    #card-3-container {
+    #card-3-container 
+    {
         position: relative; /* للسماح بوضع الزر فوق الخلفية */
         background-image: url('https://c4.wallpaperflare.com/wallpaper/811/35/824/lightbulb-artwork-robot-render-wallpaper-preview.jpg');
         background-size: cover; /* لجعل الصورة تغطي القسم بالكامل */
@@ -81,7 +99,8 @@
     }
 
     /* الزر */
-    #card-3 {
+    #card-3 
+    {
         position: relative; /* لضمان ظهوره فوق الخلفية */
         z-index: 10; /* جعله فوق الصورة */
         background-color: rgba(255, 255, 255, 0.8); /* خلفية نصف شفافة للزر */
@@ -92,12 +111,14 @@
         transition: transform 0.3s ease, background-color 0.3s ease;
     }
 
-    #card-3:hover {
+    #card-3:hover 
+    {
         transform: scale(1.05); /* تكبير الزر عند التمرير */
         background-color: rgba(255, 255, 255, 1); /* زيادة وضوح الخلفية */
     }
     /* القسم الذي يحتوي على الصورة كخلفية */
-    #card-2-container {
+    #card-2-container 
+    {
         position: relative; /* للسماح بوضع الزر فوق الخلفية */
         background-image: url('https://c4.wallpaperflare.com/wallpaper/1003/64/947/brown-canyon-with-greed-grass-and-trees-and-blue-cloudy-sky-zion-national-park-utah-zion-national-park-utah-wallpaper-preview.jpg');
         background-size: cover; /* لجعل الصورة تغطي القسم بالكامل */
@@ -108,7 +129,8 @@
     }
 
     /* الزر */
-    #card-2 {
+    #card-2
+    {
         position: relative; /* لضمان ظهوره فوق الخلفية */
         z-index: 10; /* جعله فوق الصورة */
         background-color: rgba(255, 255, 255, 0.8); /* خلفية نصف شفافة للزر */
@@ -119,12 +141,14 @@
         transition: transform 0.3s ease, background-color 0.3s ease;
     }
 
-    #card-2:hover {
+    #card-2:hover 
+    {
         transform: scale(1.05); /* تكبير الزر عند التمرير */
         background-color: rgba(255, 255, 255, 1); /* زيادة وضوح الخلفية */
     }
     
-        header.hero {
+        header.hero 
+        {
             transition: background 0.5s ease-in-out;
         }
 
@@ -132,7 +156,8 @@
              transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
         }
 
-        header.hero {
+        header.hero 
+        {
             position: relative;
             background-image: url('https://st2.depositphotos.com/2824873/12309/v/950/depositphotos_123092006-stock-illustration-physics-background-02-a.jpg');
             background-size: cover;
@@ -157,11 +182,12 @@
             transition: background-color 0.3s ease, color 0.3s ease; /* تأثير الحركة */
         }
 
-.dark-mode #card-1:hover,
-.dark-mode #card-2:hover,
-.dark-mode #card-3:hover {
+    .dark-mode #card-1:hover,
+    .dark-mode #card-2:hover,
+    .dark-mode #card-3:hover 
+    {
     background-color: #000000; /* لون أغمق عند التمرير */
-}
+    }
 
          /* تغيير خلفية مستطيل المراحل الدراسية في الوضع الداكن */
         .dark-mode .courses {
@@ -282,15 +308,27 @@
 .dark-mode .ask-here input::placeholder, .dark-mode .ask-here textarea::placeholder {
     color: #aaa; /* لون النص الافتراضي رمادي فاتح */
 }
-
+#auth-modal {
+        display: none; /* سيتم تغييره إلى block بواسطة JavaScript */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        z-index: 1000;
+    }
     </style>
-</head>
 <body>
     <header class="hero" id="hero">
+        <div id="dynamic-bg"></div>
         <div class="overlay">
             <h1>منصة أينشتاين</h1>
             <p>مش نيوتن طلع بتاع تفاح 😉</p>
-            <a href="#courses" class="btn">يلا بينا😎 </a>
+            <a href="#courses" class="btn">يلا بينا 😎</a>
         </div>
     </header>
     
@@ -306,10 +344,12 @@
         </div>
     </nav>
     <main>
+       
         <section id="about" class="about">
             <h2>عن الفيزياء</h2>
             <p>الفيزياء هي نافذة لفهم العالم والطبيعة من حولنا. اكتشف معنا القوانين التي تجعل كل شيء يعمل بانسجام.</p>
         </section>
+        
         <section id="courses" class="courses">
             <h2>المراحل الدراسية</h2>
             <div class="stage-list">
@@ -468,9 +508,8 @@
 });
 
     
-    </script>
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
+src="https://cdn.emailjs.com/dist/email.min.js">
+
     (function(){
         emailjs.init("fq5F6a3pjvJpgg1LJ_ZzV"); // ضع User ID الخاص بك هنا
     })();
@@ -491,7 +530,8 @@
             alert("حدث خطأ أثناء الإرسال. حاول مرة أخرى.");
         });
     });
-    
+
 </script>
+
 </body>
 </html>
