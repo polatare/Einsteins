@@ -1,0 +1,129 @@
+/* وضع الصورة كخلفية */
+body {
+    background: url('https://files.oaiusercontent.com/file-8uo5hBUjbsPV521VEnkHba?se=2025-02-20T18%3A00%3A17Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D39f4224a-db91-4e2b-9fe3-dacd15cf3f9b.webp&sig=RKhx3d804TLa0GNYt3MTiQbFTN1SgERHyWkDc%2B5MRdg%3D') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* جعل المربع في المنتصف */
+.register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* إضافة تأثير الزجاج مع أنيميشن */
+.register-box {
+    background: rgba(255, 255, 255, 0.1); /* شفافية زجاجية */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px); /* تأثير الزجاج */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3); /* حدود شفافة */
+    width: 350px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* أنيميشن لظهور المربع */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تحسين تصميم الحقول */
+.field input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.7); /* جعل الحواف واضحة */
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* تحسين زر الإدخال */
+.field1 input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.field1 input:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* تغيير لون النص إلى الأبيض */
+.signin {
+    color: white;
+}
+
+/* تغيير لون الرابط ليكون أكثر وضوحًا */
+.signin a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.signin a:hover {
+    text-decoration: underline;
+}
+/* أنيميشن اختفاء نموذج التسجيل */
+.fade-out {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* إعدادات رسالة الترحيب */
+.welcome-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 15px 30px;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+/* أنيميشن ظهور رسالة الترحيب */
+.fade-in {
+    animation: fadeInScale 1s ease-out forwards;
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
