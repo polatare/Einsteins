@@ -32,7 +32,7 @@ h1, h2, h3, p {
 }
 
 .hero {
-    background: url('https://source.unsplash.com/1920x1080/?electricity,physics') no-repeat center center/cover;
+    background: url('https://files.oaiusercontent.com/file-8uo5hBUjbsPV521VEnkHba?se=2025-02-20T18%3A00%3A17Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D39f4224a-db91-4e2b-9fe3-dacd15cf3f9b.webp&sig=RKhx3d804TLa0GNYt3MTiQbFTN1SgERHyWkDc%2B5MRdg%3D') no-repeat center center/cover;
     color: #fff;
     height: 100vh;
     display: flex;
@@ -197,4 +197,53 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    height: 100vh;
+    background: url('background.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
 }
