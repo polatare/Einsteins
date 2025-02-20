@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="ar">
     <style>
+        footer a img {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px; /* لتحسين الشكل */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* ظل ثلاثي الأبعاد */
+        }
+    
+        footer a img:hover {
+            transform: translateY(-10px) scale(1.1); /* حركة عند التمرير */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* ظل أعمق */
+        }
+    </style>
+    
+    <style>
         body {
             margin: 0;
             font-family: 'Cairo', sans-serif;
@@ -13,7 +29,7 @@
 
         header.hero {
             position: relative;
-            background-image: url('https://st2.depositphotos.com/2824873/12309/v/950/depositphotos_123092006-stock-illustration-physics-background-02-a.jpg');
+            background-image: url('https://files.oaiusercontent.com/file-8uo5hBUjbsPV521VEnkHba?se=2025-02-20T18%3A00%3A17Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D39f4224a-db91-4e2b-9fe3-dacd15cf3f9b.webp&sig=RKhx3d804TLa0GNYt3MTiQbFTN1SgERHyWkDc%2B5MRdg%3D');
             background-size: cover;
             background-attachment: fixed;
             height: 100vh;
@@ -38,6 +54,32 @@
         .mode-toggle {
             cursor: pointer;
             font-size: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            display: inline-block;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        footer a:hover {
+            transform: scale(1.1);
+            color: #ffcc00;
+        }
+        footer a img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            transition: transform 0.3s ease;
+        }
+        footer a img:hover {
+            transform: scale(1.2);
         }
         .content-box {
             margin: 20px auto;
@@ -77,7 +119,7 @@
         }
         header.hero {
             position: relative;
-            background-image: url('https://st2.depositphotos.com/2824873/12309/v/950/depositphotos_123092006-stock-illustration-physics-background-02-a.jpg');
+            background-image: url('https://files.oaiusercontent.com/file-8uo5hBUjbsPV521VEnkHba?se=2025-02-20T18%3A00%3A17Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D39f4224a-db91-4e2b-9fe3-dacd15cf3f9b.webp&sig=RKhx3d804TLa0GNYt3MTiQbFTN1SgERHyWkDc%2B5MRdg%3D');
             background-size: cover;
             background-attachment: fixed;
             height: 100vh;
@@ -270,12 +312,30 @@
         <h2>الدرس الأول <span class="arrow" style="float: left;">▼</span></h2>
     </div>
     <div class="video-container" id="lesson-1-videos" style="opacity: 0; transform: translateY(-20px); display: none;">
-        <iframe width="400" height="200" src="https://www.youtube.com/embed/k1nvaO-WC4k?si=Xe8b4MeipGvilyeR" title="YouTube video player 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="500" height="300" src="https://www.youtube.com/embed/k1nvaO-WC4k?si=Xe8b4MeipGvilyeR" title="YouTube video player 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 </div>
-
 <footer>
-    <p>𝝅 Pola Tarek Ragaey&copy; 2024 جميع الحقوق محفوظة</p>
+    <div>
+        Contact us
+    </div>
+    <p> 
+        <a href="https://www.tiktok.com/en/" target="_blank">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAhFBMVEVHcEwbFyAbFR8bFR4gFBsiExkbFiAeFB0kEhgbFiAnERYrAAAuDxIHoJsLAQAC//ed+/e/2NmsACMVERL/////A0gEEhPyrr1XAA8Jv7j/zNfYADgcPT3/6O9T+/S8/vvZ+vmKAibZP2X/S3YA7eT+epYcFR4aFiD5bYsagX2WX23/cpIvOAPpAAAACnRSTlMAb8Hw//9f//+MVnReTQAAAX5JREFUeAFdkwdiwjAQBOWGAgruvTtNKf//X9Yn7gwsnRmvbRVF8fwgDKO7hGHge4pz0iHhF45TQn1y/HzwC4UcMs5yvGBRjg6tiTM2CCm7oTWu74G/misSH4anfCcQRUySplle4JcTfBUQd8JlF8qyrGqpCBQXEL4JTXuRil3gAhZgxMag4l4AFwHJOlypE+QSRXDBldI5RABDDqEf6ifBjNeuM7swDc2doEkA75J5WXMS8nh7e3eCXKT5SFYUVzEJRRHH0cNdmA7gTnATJkJ0GffjP6uKhaeBisx13nlOtykN4BC+YISmS1G/YQpYkPlmYYEALg3EIXwpq3WozRXCd4yCHwg9BpELrLJfMF5GnKL8jcHx5W8rgIl/QdgNbboSST8+wKeqjoRbFZARxlnJqbbi4IHyretgo6/yGpQ4kK88y8Zv0/fNO27WYeLWU8qSAaWO221r6+KGidt941hRbF1bjU/B9qSQs2UFElHG9gzMHRyBfDxvf/sU3v7/p6c6d0XDWZwAAAAASUVORK5CYII=" alt="tiktok">
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/5327/5327004.png" alt="Facebook">
+        </a>
+        <a href="https://www.youtube.com" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2504/2504848.png" alt="YouTube">
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="https://cdn.pixabay.com/photo/2022/04/08/07/18/facebook-7118901_1280.png" alt="Facebook">
+        </a>
+    </p>
+    <p>
+        <a href="https://www.facebook.com/pola.tarek.923?locale=ar_AR" target="_blank">𝝅 Pola Tarek Ragaey&copy;2024</a>
+    </p>
 </footer>
 <script>
     // فحص وتفعيل الوضع المحفوظ عند تحميل الصفحة
