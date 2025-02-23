@@ -85,7 +85,7 @@
             max-width: 700px;
             border-radius: 10px;
             text-align: center;
-            background-color: #ffffff; /* افتراضي */
+            background-color: #00bcd4; /* افتراضي */
             color: #121212; /* نص داكن */
             border-radius: 10px; /* تحسين الحواف */
             padding: 20px; /* إضافة مسافة داخلية */
@@ -117,7 +117,7 @@
         }
         header.hero {
             position: relative;
-            background-image: url('https://files.oaiusercontent.com/file-8uo5hBUjbsPV521VEnkHba?se=2025-02-20T18%3A00%3A17Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D39f4224a-db91-4e2b-9fe3-dacd15cf3f9b.webp&sig=RKhx3d804TLa0GNYt3MTiQbFTN1SgERHyWkDc%2B5MRdg%3D');
+            background-image: url('https://wallpapercave.com/wp/wp2990066.jpg');
             background-size: cover;
             background-attachment: fixed;
             height: 100vh;
@@ -255,6 +255,125 @@
         .stage-card h3 {
             color: #333;
         }
+        .navbar {
+    background-color: #0f3749;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.einstein-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.einstein-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+.mode-toggle {
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #555;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.mode-toggle:active {
+    transform: translateX(5px); /* تأثير الحركة عند النقر */
+}
+
+.dark-mode .mode-toggle {
+    background-color: #222;
+    color: #f4f4f4;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* السلايدر الأساسي */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ddd;
+    transition: background-color 0.4s;
+    border-radius: 34px;
+}
+
+/* الدائرة المتحركة مع الإيموجي */
+.slider:before {
+    position: absolute;
+    content: "☀︎"; /* الوضع الافتراضي */
+    height: 26px;
+    width: 26px;
+    background-color: rgb(0, 0, 0);
+    transition: transform 0.4s ease-in-out, background-color 0.3s;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* تغيير الخلفية عند التفعيل وتحريك الدائرة */
+input:checked + .slider {
+    background-color: #222;
+}
+
+/* تحريك الدائرة عند التبديل */
+input:checked + .slider:before {
+    transform: translateX(26px);
+    content: "⏾"; /* تغيير الإيموجي */
+    background-color: #000000; /* تغيير لون الدائرة */
+}
     </style>
 <head>
     <meta charset="UTF-8">
@@ -267,7 +386,22 @@
         <h1>الصف الثالث الثانوي</h1>
     </header>
 </nav>
-
+<nav class="navbar">
+    <ul class="navbar-menu">
+        <li><a href="index.html">Home menu</menu></a></li>
+    </ul>
+    <div class="navbar-right">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/120px-Albert_Einstein_Head.jpg" alt="Einstein" class="einstein-img">
+        <span class="einstein-name">Einstein</span>
+        <label class="switch">
+            <input type="checkbox" id="mode-toggle">
+            <span class="slider">
+                <span class="emoji"></span>
+            </span>
+        </label>
+        
+    </div>
+</nav>
 <div class="content-box">
     <h2>محتويات الصف الثالث الثانوي</h2>
     <p>هنا ستجد محتوى خاص بالصف الثالث الثانوي.</p>
