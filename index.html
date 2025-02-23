@@ -40,7 +40,7 @@
         }
         footer
         {
-            background-color: #333;
+            background-color: #0f3749;
             color: #fff;
             text-align: center;
             padding: 20px;
@@ -159,7 +159,7 @@
         header.hero 
         {
             position: relative;
-            background-image: url('https://files.oaiusercontent.com/file-8uo5hBUjbsPV521VEnkHba?se=2025-02-20T18%3A00%3A17Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D39f4224a-db91-4e2b-9fe3-dacd15cf3f9b.webp&sig=RKhx3d804TLa0GNYt3MTiQbFTN1SgERHyWkDc%2B5MRdg%3D');
+            background-image: url('https://wallpapercave.com/wp/wp2990066.jpg');
             background-size: cover;
             background-attachment: fixed;
             height: 100vh;
@@ -177,9 +177,9 @@
         .dark-mode #card-1,
         .dark-mode #card-2,
         .dark-mode #card-3 {
-            background-color: #0000007b; /* اللون الأزرق */
-            color: #fff; /* لون النص الأبيض */
-            transition: background-color 0.3s ease, color 0.3s ease; /* تأثير الحركة */
+            background-color: #0000007b; 
+            color: #fff; 
+            transition: background-color 0.3s ease, color 0.3s ease; 
         }
 
     .dark-mode #card-1:hover,
@@ -191,23 +191,14 @@
 
          /* تغيير خلفية مستطيل المراحل الدراسية في الوضع الداكن */
         .dark-mode .courses {
-            background-color: #000; /* خلفية سوداء */
+            background-color: #0f3749; /* خلفية سوداء */
             color: #f4f4f4; /* لون النص */
-            border-radius: 10px; /* تحسين الحواف */
-            padding: 20px; /* إضافة مسافة داخلية */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* تحسين الظل */
+            border-radius: 15px; /* تحسين الحواف */
+            padding: 50px; /* إضافة مسافة داخلية */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* تحسين الظل */
         }
-        /* تغيير خلفية مستطيل "عن الفيزياء" في الوضع الداكن */
-        .dark-mode .about {
-            background-color: #000; /* خلفية سوداء */
-            color: #f4f4f4; /* لون النص */
-            border-radius: 10px; /* تحسين الحواف */
-            padding: 20px; /* مسافة داخلية */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* تحسين الظل */
-        }
-        
         .navbar {
-    background-color: #333;
+    background-color: #0f3749;
     color: #fff;
     padding: 10px 20px;
     position: sticky;
@@ -330,11 +321,58 @@
     line-height: 40px;
     font-size: 16px;
     font-weight: bold;
-    background-color: #333;
+    background-color: #0f3749;
     color: white;
     border-radius: 10px;
-    transition: all 0.5s ease-in-out;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+
+/* التأثير عند التمرير */
+footer div:hover {
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    white-space: normal;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #0d2b3e;
+    font-size: 18px;
+    flex-direction: column;
+    opacity: 1;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* التأثير عند الخروج */
+footer div:not(:hover) {
+    animation: fadeOut 0.3s ease-in-out;
+}
+
+/* تأثير الفيد إن */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* تأثير الفيد أوت */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0.5;
+        transform: scale(0.9);
+    }
 }
 
 footer div:hover {
@@ -343,7 +381,7 @@ footer div:hover {
     padding: 10px;
     white-space: normal;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    background-color: #444;
+    background-color:#0f3749;
     font-size: 18px;
 }
 
@@ -383,26 +421,40 @@ footer {
     align-items: center;
 }
 
+.contact-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 120px; /* العرض الافتراضي */
+    text-align: center;
+}
+
 .contact-box:hover {
-    width: 300px;
-    height: auto;
-    padding: 10px;
-    white-space: normal;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: auto; /* اجعل العرض يعتمد على المحتوى */
+    padding: 15px 25px;
     background-color: #444;
-    font-size: 18px;
-    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 768px) {
+    .contact-box {
+        right: 10px;
+        left: 10px;
+        width: auto;
+        text-align: center;
+    }
 }
 
-.contact-box:hover p {
-    display: block;
-}
-
-.contact-box p {
-    display: none;
-    margin: 5px 0 0;
-    font-size: 14px;
-}
 footer {
     display: flex;
     justify-content: center; /* توسيط أفقي */
@@ -436,24 +488,14 @@ footer:hover {
 }
 
 .contact-box:hover {
-    width: 300px;
-    height: auto;
+    width: 50px;
+    height: 20px;
     padding: 10px;
     white-space: normal;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     background-color: #444;
     font-size: 18px;
     flex-direction: column;
-}
-
-.contact-box:hover p {
-    display: block;
-}
-
-.contact-box p {
-    display: none;
-    margin: 5px 0 0;
-    font-size: 14px;
 }
 .hero .einstein {
     color: white;
@@ -482,6 +524,158 @@ footer:hover {
     opacity: 0;
     transform: translateY(-20px);
 }
+/* تصميم السلايدر */
+/* تصميم السلايدر */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* السلايدر الأساسي */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ddd;
+    transition: background-color 0.4s;
+    border-radius: 34px;
+}
+
+/* الدائرة المتحركة مع الإيموجي */
+.slider:before {
+    position: absolute;
+    content: "☀︎"; /* الوضع الافتراضي */
+    height: 26px;
+    width: 26px;
+    background-color: rgb(0, 0, 0);
+    transition: transform 0.4s ease-in-out, background-color 0.3s;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* تغيير الخلفية عند التفعيل وتحريك الدائرة */
+input:checked + .slider {
+    background-color: #222;
+}
+
+/* تحريك الدائرة عند التبديل */
+input:checked + .slider:before {
+    transform: translateX(26px);
+    content: "⏾"; /* تغيير الإيموجي */
+    background-color: #000000; /* تغيير لون الدائرة */
+}
+.einstein-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0f3749;
+    padding: 50px;
+    border-radius: 15px;
+    color: #fff;
+    text-align: right;
+}
+.courses{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0f3749;
+    padding: 50px;
+    border-radius: 15px;
+    color: #000000;
+    text-align: right;
+}
+.content {
+    max-width: 50%;
+}
+
+h2 {
+    font-size: 2em;
+    color: #f4d03f;
+}
+
+.question-mark {
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.subscribe-btn {
+    background-color: #f4d03f;
+    color: #0f491b;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.subscribe-btn:hover {
+    background-color: #e4c00f;
+}
+
+.image-container img {
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3));
+    margin-right: 20px; /* تحريك الصورة إلى اليمين */
+    transform: translateX(10px); /* تحسين التموضع */
+}
+@media (max-width: 768px) {
+    .image-container img {
+        margin-right: 10px; /* تحريك الصورة بشكل أقل على الشاشات الصغيرة */
+        transform: translateX(5px);
+    }
+}
+html, body {
+    overflow-x: hidden; /* يمنع التمرير الأفقي */
+    max-width: 100%; /* يضمن عدم تجاوز المحتوى لحجم الشاشة */
+}
+* {
+    box-sizing: border-box; /* يضمن حساب المساحة الصحيحة للعناصر */
+    max-width: 100%; /* يمنع العناصر من تجاوز عرض الشاشة */
+}
+
+
+.stage-list {
+    display: flex;
+    justify-content: center; /* توسيط العناصر أفقيًا */
+    align-items: center; /* توسيط العناصر عموديًا */
+    flex-wrap: wrap; /* السماح بالكسر على الأسطر الجديدة إذا لم يكن هناك مساحة كافية */
+    width: 100%; /* جعل القائمة تمتد بعرض الصفحة */
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .stage-list {
+        flex-direction: column; /* جعل القوائم عمودية على الشاشات الصغيرة */
+    }
+
+    .stage-card {
+        width: 80%; /* جعل البطاقات تأخذ معظم العرض */
+    }
+}
 
     </style>
 <body>
@@ -500,24 +694,35 @@ footer:hover {
     <nav class="navbar">
         <ul class="navbar-menu">
             <li><a href="#about">About</a></li>
-            <li><a href="#courses">courses</a></li>
             <li><a href="login.html">login</a></li>
         </ul>
         <div class="navbar-right">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/120px-Albert_Einstein_Head.jpg" alt="Einstein" class="einstein-img">
             <span class="einstein-name">Einstein</span>
-            <div class="mode-toggle" id="mode-toggle">🌙</div>
+            <label class="switch">
+                <input type="checkbox" id="mode-toggle">
+                <span class="slider">
+                    <span class="emoji"></span>
+                </span>
+            </label>
+            
         </div>
     </nav>
     <main>
        
-        <section id="about" class="about">
-            <h2>عن الفيزياء</h2>
-            <p>الفيزياء هي نافذة لفهم العالم والطبيعة من حولنا. اكتشف معنا القوانين التي تجعل كل شيء يعمل بانسجام.</p>
+        <section id="about" class="einstein-section">
+            <div class="content">
+                <h2>ليه منصتنا ؟ </h2>
+                <p>لان احنا افضل تيم فيزياء في مصر و هنخليك فاهم فيزياء مش حافظ فمستني ايه 😉</p>
+                <button class="subscribe-btn" onclick="location.href='login.html'">اشترك معانا يا نجم</button>
+            </div>
+            <div class="image-container">
+                <img src="https://png.pngtree.com/png-vector/20240807/ourmid/pngtree-albert-einstein-funny-cartoon-png-image_13131649.png" alt="ألبرت أينشتاين" />
+            </div>
         </section>
         
+        
         <section id="courses" class="courses">
-            <h2>المراحل الدراسية</h2>
             <div class="stage-list">
                 <div id="card-1-container">
                     <div id="card-1" onclick="location.href='grade1.html'">
@@ -605,7 +810,7 @@ footer:hover {
                 </a>
             </p>
             <p>
-                <a href="https://www.facebook.com/pola.tarek.923?locale=ar_AR" target="_blank">𝝅 Pola Tarek Ragaey&copy;2024</a>
+                <a href="https://www.facebook.com/pola.tarek.923?locale=ar_AR" target="_blank">𝝅 Pola Tarek Ragaey&copy;2025</a>
             </p>
         </div>
     </footer> 
@@ -623,20 +828,27 @@ footer:hover {
     });
     
     // تبديل الوضع وتحديث حالة التخزين
-    const toggleButton = document.getElementById('mode-toggle');
-    if (toggleButton) {
-        toggleButton.addEventListener('click', () => {
-            if (document.body.classList.contains('dark-mode')) {
-                document.body.classList.remove('dark-mode');
-                localStorage.setItem('darkMode', 'disabled');
-                toggleButton.textContent = '🌙';
-            } else {
-                document.body.classList.add('dark-mode');
-                localStorage.setItem('darkMode', 'enabled');
-                toggleButton.textContent = '☀️';
-            }
-        });
+    document.addEventListener('DOMContentLoaded', () => {
+    const toggleSwitch = document.getElementById('mode-toggle');
+
+    // التأكد من تحميل الوضع المخزن في localStorage
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+        toggleSwitch.checked = true;
     }
+
+    // تبديل الوضع عند النقر
+    toggleSwitch.addEventListener('change', () => {
+        if (toggleSwitch.checked) {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+});
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
